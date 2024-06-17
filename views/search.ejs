@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Search</title>
+  <link rel="stylesheet" href="/css/search.css">
+</head>
+<body>
+    <%- include('_navbar') %>
+
+  <div class="container">
+    <div class="search-container">
+      <h1>Search</h1>
+      <form id="search-form" action="/search" method="POST">
+        <input type="text" id="search-input" name="query" placeholder="Search...">
+        <br>
+        <br>
+        <button type="submit" class="button">Search</button>
+      </form>
+      <div id="search-results">
+        <% if (results && results.length > 0) { %>
+          <% results.forEach(track => { %>
+            <div class="track">
+              <h2><%= track.name %></h2>
+              <p>Artist: <%= track.artist %></p>
+              <% if (track.playcount) { %>
+                <p>Playcount: <%= track.playcount %></p>
+              <% } else { %>
+                <p>Playcount: Not available</p>
+              <% } %>
+              <% if (track.duration) { %>
+                <p>Duration: <%= formatDuration(track.duration) %></p>
+              <% } else { %>
+                <p>Duration: Not available</p>
+              <% } %>
+              <a href="<%= track.url %>" target="_blank">Listen on Last.fm</a>
+            </div>
+          <% }) %>
+        <% } else if (typeof results !== 'undefined') { %>
+          <p>No results found.</p>
+        <% } %>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

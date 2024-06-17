@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Music Dashboard</title>
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+<body>
+    <%- include('_navbar') %>
+
+    <div class="container">
+        <div class="home-container">
+            <h1 style="font-size: 3rem;">Top Tracks</h1>
+            <div id="music-container"></div>
+        </div>
+    </div>
+
+    <script>
+        async function fetchMusic() {
+            try {
+                const response = await fetch('/api/music', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                });
+                const data = await response.json();
+                const tracks = data.tracks.track;
+                let html = '';
+                tracks.forEach(track => {
+                    html += `
+                        <div class="card">
+                            <div class="bg"></div>
+                            <div class="blob"></div>
+                            <div class="content">
+                                <h2>${track.name}</h2>
+                                <p>Artist: ${track.artist.name}</p>
+                                <p>Playcount: ${track.playcount}</p>
+                                <a href="${track.url}" target="_blank">Listen on Last.fm</a>
+                            </div>
+                        </div>
+                    `;
+                });
+                document.getElementById('music-container').innerHTML = html;
+            } catch (error) {
+                console.error('Error fetching music data:', error);
+            }
+        }
+
+        // Fetch music on page load
+        fetchMusic();
+    </script>
+</body>
+</html>

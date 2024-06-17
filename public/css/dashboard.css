@@ -1,23 +1,33 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* dashboard.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
 body {
-    background: url("/assets/john-towner-JgOeRuGD_Y4-unsplash.jpg") no-repeat center center fixed;
+    background: url("/assets/aqua_music_notes_by_seanscreations1_dhepeep.png") no-repeat center center fixed;
     background-size: cover;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+}
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
-    font-family: "Poppins", sans-serif;
-}
-
-.dashboard-container {
-    background-color: #2c2c2c; /* Dark background for the form */
-    padding: 2rem;
-    border-radius: 2%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 40rem;
+    min-height: 80vh;
     text-align: center;
+}
+.dashboard-container {
+    
+    padding: 2rem;
+    border-radius: 16px;
+    min-width: 40rem; 
+    max-width: 60rem; 
+    width: auto;
     color: #fff;
+    background: rgba(0, 0, 0, 0.488);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(19px);
+    border: 1px solid rgba(0, 0, 0, 0.31);
+    text-align: center;
     margin-top: 2rem;
 }
 
@@ -30,3 +40,66 @@ body {
     font-size: 1.2rem;
     margin-bottom: 1.5rem;
 }
+.Btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 50px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    margin-left: 43%;
+    transition-duration: 0.3s;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+    background-color: RGB(29, 185, 84);
+  }
+  
+  .sign {
+    width: 100%;
+    transition-duration: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .sign svg {
+    width: 18px;
+  }
+  
+  .sign svg path {
+    fill: black;
+  }
+  .text {
+    position: absolute;
+    right: 0%;
+    width: 0%;
+    opacity: 0;
+    color: black;
+    font-size: 1.2em;
+    font-weight: 600;
+    transition-duration: 0.3s;
+  }
+  .Btn:hover {
+    width: 150px;
+    border-radius: 40px;
+    transition-duration: 0.3s;
+  }
+  
+  .Btn:hover .sign {
+    width: 30%;
+    transition-duration: 0.3s;
+    padding-left: 20px;
+  }
+  .Btn:hover .text {
+    opacity: 1;
+    width: 70%;
+    transition-duration: 0.3s;
+    padding-right: 10px;
+  }
+  .Btn:active {
+    transform: translate(2px, 2px);
+  }
+  

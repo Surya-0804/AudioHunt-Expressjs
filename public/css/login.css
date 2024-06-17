@@ -1,125 +1,127 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 body {
-    /* Use a relative path for the background image */
-    background: url("/assets/daniel-leone-v7daTKlZzaw-unsplash.jpg") no-repeat center center fixed;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    font-family: "Poppins", sans-serif;
+  background: url("/assets/aqua_music_notes_by_seanscreations1_dhepeep.png") no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
 }
 
 .login-container {
-    background-color: #2c2c2c; /* Dark background for the form */
-    padding: 2rem;
-    border-radius: 5%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 30rem;
-    text-align: center;
+  padding: 2rem;
+  background: rgba(57, 1, 1, 0.415);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(19px);
+  -webkit-backdrop-filter: blur(19px);
+  border: 1px solid rgba(0, 0, 0, 0.31);
+  width: 30rem;
+  text-align: center;
 }
 
 h1 {
-    font-size: 2.5rem;
-    color: #fff;
+  font-size: 2.5rem;
+  color: #fff;
 }
 
 .error-message {
-    color: red;
-    margin-bottom: 1rem;
+  color: red;
+  margin-bottom: 1rem;
 }
 
 .form-group {
-    margin-bottom: 1.5rem;
-    text-align: left;
+  margin-bottom: 1.5rem;
+  text-align: left;
 }
 
 .form-group label {
-    color: #fff;
-    display: block;
-    margin-bottom: 0.5rem;
+  color: #fff;
+  display: block;
+  margin-bottom: 0.5rem;
 }
 
 .form-group input[type="email"],
 .form-group input[type="password"] {
-    width: 100%;
-    padding: 0.8rem;
-    border: none;
-    border-radius: 5px;
-    box-sizing: border-box;
+  width: 100%;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 5px;
+  box-sizing: border-box;
 }
 
 .form-group button {
-    --color: #00A97F;
-    padding: 0.8em 1.7em;
-    background-color: transparent;
-    border-radius: .3em;
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-    transition: .5s;
-    font-weight: 400;
-    font-size: 17px;
-    border: 1px solid;
-    font-family: inherit;
-    text-transform: uppercase;
-    color: var(--color);
-    z-index: 1;
-    margin: 0 auto;
-    display: block;
+  --color: #1cb955;
+  padding: 0.8em 1.7em;
+  background-color: transparent;
+  border-radius: 0.3em;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.5s;
+  font-weight: 400;
+  font-size: 17px;
+  border: 1px solid;
+  font-family: inherit;
+  text-transform: uppercase;
+  color: var(--color);
+  z-index: 1;
+  margin: 0 auto;
+  display: block;
 }
 
-.form-group button::before, 
+.form-group button::before,
 .form-group button::after {
-    content: '';
-    display: block;
-    width: 50px;
-    height: 50px;
-    transform: translate(-50%, -50%);
-    position: absolute;
-    border-radius: 50%;
-    z-index: -1;
-    background-color: var(--color);
-    transition: 1s ease;
+  content: "";
+  display: block;
+  width: 50px;
+  height: 50px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  background-color: var(--color);
+  transition: 1s ease;
 }
 
 .form-group button::before {
-    top: -1em;
-    left: -1em;
+  top: -1em;
+  left: -1em;
 }
 
 .form-group button::after {
-    left: calc(100% + 1em);
-    top: calc(100% + 1em);
+  left: calc(100% + 1em);
+  top: calc(100% + 1em);
 }
 
-.form-group button:hover::before, 
+.form-group button:hover::before,
 .form-group button:hover::after {
-    height: 410px;
-    width: 410px;
+  height: 410px;
+  width: 410px;
 }
 
 .form-group button:hover {
-    color: rgb(10, 25, 30);
+  color: rgb(10, 25, 30);
 }
 
 .form-group button:active {
-    filter: brightness(.8);
+  filter: brightness(0.8);
 }
 
 .signup-link {
-    margin-top: 1rem;
-    color: #fff;
-    font-size: 0.9rem;
+  margin-top: 1rem;
+  color: #fff;
+  font-size: 0.9rem;
 }
 
 .signup-link a {
-    color: #00A97F;
-    text-decoration: none;
-    font-weight: bold;
+  color: #1cb955;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .signup-link a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
